@@ -1,6 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
 #main {
     /* add CSS here */
+    max-width: 800px;
+    margin: auto;
 }
-.pet {
+.pet{
     /* add CSS here */
+    max-width: 400px;
+    height: 300px;
+    margin: auto;
+
+
 }
+
+.pet>img{
+    border: dashed #ff0272;
+    box-shadow: 2px 3px 2px 3px #d3d3d3;
+    border-width: 2px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
