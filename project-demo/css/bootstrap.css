@@ -998,6 +998,7 @@ pre code {
   }
 }
 
+
 @media (min-width: 768px) {
   .col-md {
     -ms-flex-preferred-size: 0;
@@ -6343,6 +6344,45 @@ button.bg-dark:focus {
     display: inline-flex !important;
   }
 }
+
+.d-none {
+  display: none !important;
+}
+@media (max-width:576px) {
+
+  .d-xs-none {
+    display: none !important;
+  }
+  .d-xs-inline {
+    display: inline !important;
+  }
+  .d-xs-inline-block {
+    display: inline-block !important;
+  }
+  .d-xs-block {
+    display: block !important;
+  }
+  .d-xs-table {
+    display: table !important;
+  }
+  .d-xs-table-row {
+    display: table-row !important;
+  }
+  .d-xs-table-cell {
+    display: table-cell !important;
+  }
+  .d-xs-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .d-xs-inline-flex {
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+
+}
+
+
 
 @media (min-width: 768px) {
   .d-md-none {
