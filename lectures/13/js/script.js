@@ -19,6 +19,20 @@ var questions = [{
         "for",
         "none of the above"],
     correctAnswer : 1
+},{
+    question : "Add the numbers 10,4",
+    choices : ["17",
+    "12",
+    "14",
+    "15"],
+    correctAnswer : 2
+},{
+    question : "Multiply the numbers 16,4",
+    choices : ["43",
+        "64",
+        "34",
+        "75"],
+    correctAnswer : 1
 }];
 
 var currentQuestion = 0;
@@ -28,10 +42,27 @@ displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
+
+    if(currentQuestion>=3)
+    {
+        displayScore();
+    }
+    displayCurrentQuestion();
 }
 
 function displayCurrentQuestion() {
     /*Write your code here */
+
+    document.getElementById("question").innerHTML=questions[currentQuestion].question;
+
+      for(var i=0;i<4;i++)
+      {
+          document.getElementById("choice-list").innerHTML +='<li> <input type="radio"  name="ti" value="+i">'+ questions[currentQuestion].choices[i]+ '</li>'+"<br>";
+
+      }
+      currentQuestion++;
+
+
 }
 
 function resetQuiz() {
