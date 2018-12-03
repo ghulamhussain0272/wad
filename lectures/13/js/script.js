@@ -40,27 +40,30 @@ var correctAnswers = 0;
 var quizOver = false;
 displayCurrentQuestion();
 document.getElementById("quiz-message").style.display = 'none';
+
 function displayNext() {
     /*Write your code here */
 
-    if(currentQuestion>=3)
-    {
-        displayScore();
-    }
-    displayCurrentQuestion();
+             currentQuestion++;
+             if (currentQuestion >= 5) {
+                 displayScore();
+             }
+
+             document.getElementById("choice-list").innerHTML = null;
+             displayCurrentQuestion();
+
+
 }
 
 function displayCurrentQuestion() {
     /*Write your code here */
 
     document.getElementById("question").innerHTML=questions[currentQuestion].question;
-
-      for(var i=0;i<4;i++)
+      for(let i=0;i<4;i++)
       {
-          document.getElementById("choice-list").innerHTML +='<li> <input type="radio"  name="ti" value="+i">'+ questions[currentQuestion].choices[i]+ '</li>'+"<br>";
+          document.getElementById("choice-list").innerHTML +='<li> <input type="radio"  name="ti">'+ questions[currentQuestion].choices[i]+ '</li>'+"<br>";
 
       }
-      currentQuestion++;
 
 
 }
