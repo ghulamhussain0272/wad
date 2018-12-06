@@ -44,6 +44,7 @@ document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
     var x=document.querySelector("input[type=radio]:checked");
+
      if(x!=null){
       currentQuestion++;
         if (currentQuestion >= 5) {
@@ -71,6 +72,7 @@ function displayCurrentQuestion() {
           document.getElementById("choice-list").innerHTML +='<li> <input type="radio" id="'+i+'"  name="ti">'+ questions[currentQuestion].choices[i]+ '</li>'+"<br>";
 
       }
+
 
 
 }
