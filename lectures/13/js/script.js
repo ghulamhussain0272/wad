@@ -44,17 +44,25 @@ document.getElementById("quiz-message").style.display = 'none';
 function displayNext() {
     /*Write your code here */
     var x=document.querySelector("input[type=radio]:checked");
-
      if(x!=null){
-      currentQuestion++;
-        if (currentQuestion >= 5) {
+         if(x.value==questions[currentQuestion].correctAnswer)
+         {
+             correctAnswers++;
+         }
+        currentQuestion++;
+        if (currentQuestion >= questions.length) {
+            document.getElementById("question").innerHTML = " ";
             displayScore();
+            document.getElementById("next-btn").innerHTML = "Play Again";
         }
 
         document.getElementById("choice-list").innerHTML = null;
+         document.getElementById("quiz-message").innerHTML = " ";
+         document.getElementById("quiz-message").style.display = 'block';
         displayCurrentQuestion();
     }
     else{
+
          document.getElementById("quiz-message").innerHTML = "Please select the option ";
          document.getElementById("quiz-message").style.display = 'block';
         document.getElementById("choice-list").innerHTML = null;
@@ -65,11 +73,10 @@ function displayNext() {
 
 function displayCurrentQuestion() {
     /*Write your code here */
-
     document.getElementById("question").innerHTML=questions[currentQuestion].question;
-      for(let i=0;i<4;i++)
+      for(let i=0;i<questions.length;i++)
       {
-          document.getElementById("choice-list").innerHTML +='<li> <input type="radio" id="'+i+'"  name="ti">'+ questions[currentQuestion].choices[i]+ '</li>'+"<br>";
+          document.getElementById("choice-list").innerHTML +='<li> <input type="radio" value="'+i+'"  name="ti">'+ questions[currentQuestion].choices[i]+ '</li>'+"<br>";
 
       }
 

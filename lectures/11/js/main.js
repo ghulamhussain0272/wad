@@ -93,7 +93,7 @@ show();
 //============================================
 
 
-/*function getTodos() {
+function getTodos() {
     var todos = [];
     var todos_str = localStorage.getItem('todo');
     if(todos_str !== null)
@@ -162,7 +162,7 @@ function isDone(e) {
     localStorage.setItem('todo',JSON.stringify(todos));
     show();
 }
-show();*/
+show();
 
 
 
