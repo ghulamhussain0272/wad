@@ -102,8 +102,10 @@ include "server/function.php"
 
         <div class="row">
             <div class="col">
-                Content
-            </div>
+              <?php
+                display_product();
+            ?>
+                </div>
         </div>
     </article>
 
