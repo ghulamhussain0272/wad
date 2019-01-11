@@ -13,7 +13,7 @@ function getCats(){
 }
 function getBrands(){
     global $con;
-    $getBrandsQuery = "select * from brands";
+    $getBrandsQuery = "select * from brand";
     $getBrandsResult = mysqli_query($con,$getBrandsQuery);
     while($row = mysqli_fetch_assoc($getBrandsResult)){
         $brand_id = $row['brand_id'];
@@ -26,19 +26,19 @@ function getPro(){
     global $con;
     $getProQuery = '';
     if(!isset($_GET['cat']) && !isset($_GET['brand']) && !isset($_GET['search'])){
-        $getProQuery = "select * from products order by RAND();";
+        $getProQuery = "select * from product order by RAND();";
     }
     else if(isset($_GET['cat'])){
         $pro_cat_id = $_GET['cat'];
-        $getProQuery = "select * from products where pro_cat = '$pro_cat_id'";
+        $getProQuery = "select * from product where pro_cat = '$pro_cat_id'";
     }
     else if(isset($_GET['brand'])){
         $pro_brand_id = $_GET['brand'];
-        $getProQuery = "select * from products where pro_brand = '$pro_brand_id'";
+        $getProQuery = "select * from product where pro_brand = '$pro_brand_id'";
     }
     else if(isset($_GET['search'])){
         $user_query = $_GET['search'];
-        $getProQuery = "select * from products where pro_keywords like '%$user_query%'";
+        $getProQuery = "select * from product where pro_keywords like '%$user_query%'";
     }
     $getProResult = mysqli_query($con,$getProQuery);
     $count_pro = mysqli_num_rows($getProResult);

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <?php
 require "server/functions.php";
+require "server/function.php";
 ?>
 <html lang="en">
 <head>
@@ -106,7 +107,7 @@ require "server/functions.php";
                             <div class="input-group-text"><i class="fas fa-user"></i></div>
                         </div>
                         <input type="text" class="form-control" id="c_name" name="c_name" placeholder="Enter your name"
-                               required pattern="19[5-9][0-9]|200[0-1]">
+                               required pattern="0?[1-9]|1[0-9]|2[0-9]|3[0-1]">
                        <!-- "19[5-9][0-9]|200[0-1]" for years-->
                        <!-- "0?[1-9]|1[0-9]|2[0-9]|3[0-1]" for dates -->
                     </div>

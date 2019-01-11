@@ -1,5 +1,6 @@
 <?php
-include "server/function.php"
+include "server/function.php";
+include "server/functions.php";
 ?>
 
 <!DOCTYPE html>
@@ -103,7 +104,7 @@ include "server/function.php"
         <div class="row">
             <div class="col">
               <?php
-                display_product();
+                getPro();
             ?>
                 </div>
         </div>
