@@ -1,9 +1,7 @@
-<?php
-include "server/function.php";
-include "server/functions.php";
-?>
-
 <!DOCTYPE html>
+<?php
+require "server/functions.php";
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -69,9 +67,7 @@ include "server/functions.php";
                     Categories
                 </a>
                 <ul class="collapse show list-unstyled" id="homeSubmenu">
-                    <?php
-                    getCat();
-                    ?>
+                    <?php getCats(); ?>
                 </ul>
             </li>
             <li class="active">
@@ -80,9 +76,7 @@ include "server/functions.php";
                     Brands
                 </a>
                 <ul class="collapse show list-unstyled" id="pageSubmenu">
-                    <?php
-                    getBrand();
-                    ?>
+                    <?php getBrands(); ?>
                 </ul>
             </li>
             <li>
@@ -102,23 +96,19 @@ include "server/functions.php";
     <article id="content" class="container-fluid bg-white">
 
         <div class="row">
-            <div class="col">
-              <?php
-                getPro();
-            ?>
-                </div>
+                <?php getPro(); ?>
         </div>
     </article>
 
 
 </div>
 <footer class="container-fluid">
-    <div class="row">
-        <div class="col text-center">
-            &copy; 2019 by Muhammad Ali Makhdoom
+        <div class="row">
+            <div class="col text-center">
+               &copy; 2019 by Muhammad Ali Makhdoom
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 <script src="js/jquery-3.3.1.js"></script>
 <script src="js/bootstrap.bundle.js"></script>
 </body>

@@ -1,6 +1,6 @@
 <?php
 
-include "../server/function.php";
+include "../server/functions.php";
 if(isset($_POST['insert_brand']))
 {
     $title=$_POST['brand_title'];
@@ -48,13 +48,13 @@ if(isset($_POST['insert_brand']))
                     <input type="text" class="form-control" id="brand_title" name="brand_title" placeholder="Enter Brand Title" >
                 </div>
             </div>
-
-            <div class="row my-3">
-                <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
-                <div class="col-sm-9 col-md-8 col-lg-4 col-xl-12">
-                    <button type="submit" name="insert_brand" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Insert Now </button>
-                </div>
+        </div>
+        <div class="row my-3">
+            <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
+            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
+                <button type="submit" name="insert_brand" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Insert Now </button>
             </div>
+        </div>
     </form>
 </div>
 </body>

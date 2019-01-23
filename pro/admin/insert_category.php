@@ -1,6 +1,6 @@
 <?php
 
-include "../server/function.php";
+include "../server/functions.php";
 if(isset($_GET['insert_cat']))
 {
     $title=$_GET['cat_title'];
@@ -48,10 +48,10 @@ if(isset($_GET['insert_cat']))
                     <input type="text" class="form-control" id="cat_title" name="cat_title" placeholder="Enter Category Title" >
                 </div>
             </div>
-
-            <div class="row my-3">
+        </div>
+        <div class="row my-3">
             <div class="d-none d-sm-block col-sm-3 col-md-4 col-lg-2 col-xl-2 mt-auto"></div>
-            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-12">
+            <div class="col-sm-9 col-md-8 col-lg-4 col-xl-4">
                 <button type="submit" name="insert_cat" class="btn btn-primary btn-block"><i class="fas fa-plus"></i> Insert Now </button>
             </div>
         </div>
