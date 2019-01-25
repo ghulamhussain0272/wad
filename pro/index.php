@@ -11,6 +11,26 @@ require "server/functions.php";
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bangers|Old+Standard+TT">
+    <script>
+        function checkproduct(str) {
+                if (str.length == 0) {
+                    document.getElementById("hint").innerHTML = "";
+                    return;
+                }
+                else {
+                    var xmlhttp = new XMLHttpRequest();
+                    xmlhttp.onreadystatechange = function() {
+                        if (this.readyState == 4 && this.status == 200) {
+                            document.getElementById("pros").innerHTML = this.responseText;
+                        }
+                    };
+                    xmlhttp.open("GET", "check_product.php?e=" + str, true);
+                    xmlhttp.send();
+                    //document.getElementById('hint').innerHTML = 'loading...';
+                }
+
+        }
+    </script>
 </head>
 <body>
 
@@ -31,7 +51,8 @@ require "server/functions.php";
                             <div class="input-group">
                                 <input type="search" class="form-control"
                                        id="search-bar" name="search"
-                                       placeholder="Find Mobile Phones, Laptops, and more..">
+                                       placeholder="Find Mobile Phones, Laptops, and more.."
+                                onkeyup="checkproduct(this.value)">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-secondary btn-lg" type="submit"><i class="fas fa-search"></i></button>
                                 </div>
